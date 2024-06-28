@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./styles/travel_recommendation.css">
+  <style>
+    /* Estilos adicionales específicos para la página de contacto */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    #contactSection {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #contactSection h2 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    #contactForm {
+      display: grid;
+      gap: 10px;
+    }
+
+    #contactForm label {
+      font-weight: bold;
+    }
+
+    #contactForm input,
+    #contactForm textarea,
+    #contactForm button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    #contactForm button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #contactForm button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Travel Bloom</h1>
+    <ul>
+      <li><a href="./index.html" id="home">Home</a></li>
+      <li><a href="./about.html" id="about">About Us</a></li>
+      <li><a href="./contact.html" id="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <div id="contactSection">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="thankYou(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required aria-label="Name">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required aria-label="Email">
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required aria-label="Message"></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <script src="./scripts/travel_recommendation.js"></script>
+  <script>
+    function thankYou(event) {
+      event.preventDefault();
+      alert('Thank you for contacting us!');
+      // Aquí podrías añadir más lógica para enviar el formulario, si es necesario
+    }
+  </script>
+</body>
+</html>

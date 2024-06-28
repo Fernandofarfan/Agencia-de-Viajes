@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Bloom</title>
+  <link rel="stylesheet" href="./styles/travel_recommendation.css">
+  <style>
+    /* Estilos adicionales específicos para la página de inicio */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    /* Estilo para la sección principal de inicio */
+    #homeSection {
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    /* Estilo para el contenido principal dentro de #homeSection */
+    #homeSection .intro {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo para los botones dentro de #homeSection */
+    #homeSection button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    #homeSection button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilo para los resultados de búsqueda en la sección de contenido */
+    .result {
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .result img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <h1>Travel Bloom</h1>
+      <ul>
+        <li><a href="./index.html" id="home">Home</a></li>
+        <li><a href="./about.html" id="about">About Us</a></li>
+        <li><a href="./contact.html" id="contact">Contact Us</a></li>
+        <li>
+          <input type="text" id="searchInput" placeholder="Search for destinations...">
+        </li>
+        <li>
+          <button id="searchButton">Search</button>
+        </li>
+        <li>
+          <button id="clearButton">Clear</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section with Background Image -->
+  <section id="homeSection">
+    <div class="intro">
+      <h2>Welcome to Travel Bloom</h2>
+      <p>Your one-stop platform to discover amazing travel destinations around the world.</p>
+      <button onclick="location.href='#';">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section id="content"></section>
+
+  <!-- JavaScript for Dynamic Content -->
+  <script src="./scripts/travel_recommendation.js"></script>
+</body>
+</html>
